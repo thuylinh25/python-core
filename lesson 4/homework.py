@@ -9,8 +9,11 @@
 #         print("Bai 1 DONE!")
 
 #bai tap 1: Viết chương trình tính tổng, tích của các phần tử trong một list
-my_list = [0, 1,"abc", 5]
-new_list1=[x for x in my_list if x + x]
-print("List tong cac phan tu: ", new_list1)
-new_list2=[x for x in my_list if x * x]
-print("List tich cac phan tu: ", new_list2)
+my_list = input("Nhap chuoi:")
+tong = 0
+if my_list.isnumeric() == True:
+    print("Nhap dung")
+else:
+    print("Nhap sai")
+
+
