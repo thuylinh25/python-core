@@ -42,3 +42,29 @@
 #     print(f"so lon nhat la {max_list} va so nho nhat la {min_list}")
 
 #bai tap 3: Viết chương trình tạo ra list mới bằng cách ghép một chuỗi s vào các phần tử list cũ.
+# list = [0, 1, 2, 3,4, "abc"]
+# s=str(input("Nhap chuoi"))
+# list.extend(s)
+# print("Chuoi moi la:", list)
+
+#Bài 04: Viết chương trình chia một list thành 2 phần với độ dài phần đầu được nhập vào từ bàn phím.
+# list = [0, 1, 2, 3,4, "abc"]
+# len1 = int(input("Do dai phan dau la:"))
+# print("Chuoi dau la:", list[0:len1])
+# print("Chuoi sau la:", list[len1:])
+#Bài 05: Viết chương trình in ra phần tử có số lần xuất hiện nhiều nhất trong một list.
+        # Nếu có nhiều phần tử có cùng số lần xuất hiện nhiều nhất thì in ra 1 trong số chúng.
+n=int(input("So phan tu cua chuoi la:"))
+list=[]
+for i in range (n):
+    list.append(input())
+print("chuoi la:",list)
+for j in range(len(list)):
+    x = list.count(list[0])
+    y = list.count(list[j])
+    if y > x:
+        print("phan tu co so lan xuat hien nhieu nhat la:",list[j])
+    else:
+        y = x
+        print("phan tu ngau nhien co so lan  xuat hien nhieu nhat la:")
+        # print("", random.choice(list[i],)
