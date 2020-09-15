@@ -54,20 +54,20 @@
 # print("Chuoi sau la:", list[len1:])
 #Bài 05: Viết chương trình in ra phần tử có số lần xuất hiện nhiều nhất trong một list.
         # Nếu có nhiều phần tử có cùng số lần xuất hiện nhiều nhất thì in ra 1 trong số chúng.
+# n=int(input("So phan tu cua chuoi la:"))
+# list=[]
+# for i in range (n):
+#     list.append(input())
+# print("chuoi la:",list)
+# max = 0
+# giatri = ""
+# if list:
+#     for i in list:
+#         if max<list.count(i):
+#             max=list.count(i)
+#             giatri=i
+# print("Phần tử {} co so lan lap lai nhieu nhat la {}". format(i,max))
 
-n=int(input("So phan tu cua chuoi la:"))
-list=[]
-
-for i in range (n):
-    list.append(input())
-print("chuoi la:",list)
-max = 0
-giatri = ""
-if list:
-    for i in list:
-        if max<list.count(i):
-            max=list.count(i)
-            giatri=i
-print("Số lần lặp lại max",max)
-print("Phần tử max " + str(giatri))
-
+#Bài 06: Viết chương trình đếm các chuỗi trong một list thỏa mãn:
+        # + Độ dài từ 2 trở lên
+        # + Ký tự đầu tiên và cuối cùng của chuỗi đó giống nhau
