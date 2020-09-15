@@ -71,3 +71,52 @@
 #Bài 06: Viết chương trình đếm các chuỗi trong một list thỏa mãn:
         # + Độ dài từ 2 trở lên
         # + Ký tự đầu tiên và cuối cùng của chuỗi đó giống nhau
+# list = []
+# n=int(input("so chuoi trong list:"))
+# for i in range(n):
+#     gt=input("chuoi thu {} la:". format(i))
+#     list.append(gt)
+# print("List la:", list)
+# x = 0
+# for j in range(len(list)):
+#     if len(list[j]) >= 2 and list[j][0] == list[j][-1]:
+#         x+=1
+#         print("So chuoi thoa man dieu kien la:", x)
+#         break
+# else:
+#     print("Khong co chuoi nao thoa man dieu kien")
+#Bài 07: Viết chương trình kiểm tra 2 list có phần tử chung hay không.
+# n=int(input("So phan tu cua chuoi thu nhat la:"))
+# m=int(input("So phan tu cua chuoi thu hai la:"))
+# list1=[]
+# list2=[]
+# for i in range (n):
+#     list1.append(input())
+# print("chuoi thu nhat la:",list1)
+# for j in range(m):
+#     list2.append(input())
+# print("chuoi thu hai la:", list2)
+# for x in list1:
+#     if x in list2:
+#         print("Hai list co phan tu chung")
+#         break
+# else:
+#     print("Hai list khong co phan tu chung")
+
+#Bài 08: Cho list các số nguyên dương A.
+        #Xây dựng chương trình đếm số lượng tập gồm 2 phần tử A[i] và A[j] thỏa mãn A[i] > A[j] và i < j.
+# A=[]
+# n=int(input("So phan tu trong chuoi la:"))
+# for x in range(n):
+#     gt=int(input())
+#     if gt < 0:
+#         print("Moi nhap lai chuoi")
+#     else:
+#         A.append(gt)
+# print("Chuoi la:", A)
+# count = 0
+# for i in range (len(A)):
+#     for j in range (len(A)):
+#         if A[i] > A[j] and i < j:
+#             count +=1
+# print("So luong tap thoa man dieu kien la:", count)
