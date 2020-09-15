@@ -54,17 +54,20 @@
 # print("Chuoi sau la:", list[len1:])
 #Bài 05: Viết chương trình in ra phần tử có số lần xuất hiện nhiều nhất trong một list.
         # Nếu có nhiều phần tử có cùng số lần xuất hiện nhiều nhất thì in ra 1 trong số chúng.
+
 n=int(input("So phan tu cua chuoi la:"))
 list=[]
+
 for i in range (n):
     list.append(input())
 print("chuoi la:",list)
-for j in range(len(list)):
-    x = list.count(list[0])
-    y = list.count(list[j])
-    if y > x:
-        print("phan tu co so lan xuat hien nhieu nhat la:",list[j])
-    else:
-        y = x
-        print("phan tu ngau nhien co so lan  xuat hien nhieu nhat la:")
-        # print("", random.choice(list[i],)
+max = 0
+giatri = ""
+if list:
+    for i in list:
+        if max<list.count(i):
+            max=list.count(i)
+            giatri=i
+print("Số lần lặp lại max",max)
+print("Phần tử max " + str(giatri))
+
