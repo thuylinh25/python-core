@@ -26,12 +26,12 @@
 # print ("tich chuoi bang:" +str(b))
 
 #bai tap 2: Viết chương trình tìm số lớn nhất, nhỏ nhất trong một list
-# list=[]
-# n=int(input("So phan tu trong chuoi la:"))
-# for i in range(n):
-#     gt=int(input("gia tri phan tu thu {} la:".format(i)))
-#     list.append(gt)
-# print("chuoi la:", list )
+list=[]
+n=int(input("So phan tu trong chuoi la:"))
+for i in range(n):
+    gt=int(input("gia tri phan tu thu {} la:".format(i)))
+    list.append(gt)
+print("chuoi la:", list )
 # if list:
 #     max_list, min_list = list[0], list[0]
 #     for v in list:
