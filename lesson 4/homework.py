@@ -29,7 +29,7 @@
 list=[]
 n=int(input("So phan tu trong chuoi la:"))
 for i in range(n):
-    gt=int(input("gia tri phan tu thu {} la:".format(i)))
+    gt=str(input("gia tri phan tu thu {} la:".format(i)))
     list.append(gt)
 print("chuoi la:", list )
 # if list:
