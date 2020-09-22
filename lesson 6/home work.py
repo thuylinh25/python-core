@@ -74,10 +74,11 @@
 # print(new_dict)
 
 # Bài 08: Viết chương trình lấy ra top 3 phần tử có giá trị lớn nhất từ dict
-# my_dict = {5:3,23:40,50:50}
-# new_list={}
-# for key in my_dict:
-#     for value in sorted(my_dict.values(), reverse=True):
-        # new_list[value]=key
-        # if len(new_list) == 3:
-        #     print(new_list)
+my_dict = {18: 2, 2: 3, 3: 4, 5:3}
+new_dict={}
+for (key, value) in my_dict.items():
+    for value in sorted(my_dict.values(), reverse=True):
+        new_dict={key:value}
+        if len(new_dict) == 3:
+            print(new_dict)
+
