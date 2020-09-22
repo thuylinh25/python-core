@@ -74,11 +74,32 @@
 # print(new_dict)
 
 # Bài 08: Viết chương trình lấy ra top 3 phần tử có giá trị lớn nhất từ dict
-my_dict = {18: 2, 2: 3, 3: 4, 5:3}
-new_dict={}
-for (key, value) in my_dict.items():
-    for value in sorted(my_dict.values(), reverse=True):
-        new_dict={key:value}
-        if len(new_dict) == 3:
-            print(new_dict)
+# my_dict = {18: 2, 2: 4, 3: 10, 5:6}
+# new_dict={}
+# my_dict=sorted(my_dict.items(), reverse=True, key=lambda x:x[1])
+# for i in my_dict:
+#     new_dict[i[0]]=i[1]
+#     if len(new_dict)==3:
+#         print(new_dict)
+
+# Bài 09: Viết hàm đếm số lần xuất hiện các ký tự trong một String
+# Ví dụ:
+#     Input: ‘Stringings’
+#     Output: {‘S’: 1, ‘t’: 1, ‘r’: 1, ’i’: 2, ‘n’: 2, ‘g’: 2, ‘s’: 1}
+
+# string="Stringings"
+# tuple={}
+# for i in string:
+#   tuple[i]=string.count(i)
+# print(tuple)
+
+# Bài 10: Viết hàm đếm số lần xuất hiện các từ đơn trong một đoạn văn bản
+# string = ' Viết hàm đếm số lần xuất hiện các từ đơn trong một đoạn văn bản '
+# string2= string.split(" ")
+# tuple={}
+# for i in string2:
+#   tuple[i]=string2.count(i)
+# print(tuple)
+
+# Bài 11: Viết chương trình để sinh ra dict mới từ list các dict có dạng như trong ví dụ:
 
