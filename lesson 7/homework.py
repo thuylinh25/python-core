@@ -61,15 +61,73 @@
 #         def is_pangram(str, alphabet)
 #     đề kiểm tra xem chuỗi str có phải là Pangram không, trả lại True nếu có, False nếu không
 #     Ghi chú: Pangram là chuỗi chứa mỗi chữ cái trong bảng alphabet ít nhất 1 lần
-def is_pangram(str, alphabet):
-  alphabet="abcdefghijklmnopqrstuvwxyz"
-  for i in alphabet:
-      if i not in str.lower():
-          return False
-      elif i in str.lower() and len(set(i))<=len(set(str.lower())):
-          return True
 
-print(is_pangram("quick brown fox jumps over the lazy dog","abcdefghijklmnopqrstuvwxyz"))
 
-# str=("e quick brown fox jumps over the lazy dog")
-# print(len(set(str)))
+# Bài 07: Viết hàm
+#         def create_matrix(n, m)
+#     xử lý việc tạo ra ma trận n hàng, m cột với giá trị phần tử tại (i, j) = i*j
+
+#cach 1:
+# def create_matrix(n,m):
+#     matrix=[]
+#     for i in range (n):
+#         matrix.append([])
+#         for j in range (m):
+#             matrix[i].append(i*j)
+#     return matrix
+# print(create_matrix(4,5))
+
+#cach 2:
+# def create_matrix(n,m):
+#     return[[i*j for i in range(n)]for j in range(m)]
+# print(create_matrix(4,5))
+
+# Bài 08: Viết hàm
+#         def body_mass_index(m, h)
+#     để tính toán chỉ số BMI của một người với cân nặng m (kg), chiều cao h (m)
+#       Viết hàm
+#         def bmi_information(m, h)
+#     để đưa ra thông tin về chỉ số BMI cũng như phân loại mức độ gầy - béo của người cân nặng m, chiều cao h
+
+# def body_mass_index(m,h):
+#     bmi=m/(h**2)
+#     return bmi
+# print(body_mass_index(49,1.5))
+#
+# def bmi_information(m, h):
+#     bmi = m / (h ** 2)
+#     if bmi < 18.8:
+#         print("gay")
+#     elif bmi >= 25:
+#         print("beo")
+#     else:
+#         print("binh thuong")
+#
+# bmi_information(49,1.5)
+
+# Bài 09: Viết hàm
+#         def change_upper_lower(str)
+#     chuyển toàn bộ các ký tự in hoa sang in thường và in thường thành in hoa trong str
+
+# def change_upper_lower(str):
+#     s_new=""
+#     for i in str:
+#         if "a"<=i<="z":
+#             s_new+=i.upper()
+#         elif "A"<=i<="Z":
+#             s_new+=i.lower()
+#     return s_new
+# print(change_upper_lower("HeLLo"))
+
+# Bài 10: Viết hàm đệ quy đếm và trả về số lượng chữ số lẻ của số nguyên dương n cho trước.
+#         Ví dụ: Hàm trả về 4 nếu n là 19922610 (do n có 4 số lẻ là 1, 9, 9, 1)
+def odd_count(n):
+   count=0
+   so_du = n % 10
+   while n>0:
+       if so_du <0:
+           return 1
+       elif so_du%2 !=0:
+           count+=1
+   return count
+print(odd_count())
