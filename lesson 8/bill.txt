@@ -1,7 +1,4 @@
-#!/usr/bin/python
-# -*- coding: latin-1 -*-
-import os, sys
-first line
+firstline
 second line
 
 third line what a beautiful day
