@@ -1,0 +1,6 @@
+4 seasons:
+spring
+summer
+autumn
+winter
+

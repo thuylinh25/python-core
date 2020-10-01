@@ -1,4 +1,0 @@
-firstline
-second line
-
-third line what a beautiful day
