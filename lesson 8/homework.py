@@ -10,10 +10,10 @@
 
 # Bài 02: Viết chương trình thêm một chuỗi nào đó vào cuối file
 
-my_list=["summer","autumn","winter"]
-my_list=map(lambda x: x+'\n', my_list)
-f=open("my_file.txt", 'a',encoding='utf-8')
-f.writelines(my_list)
+# my_list=["summer","autumn","winter"]
+# my_list=map(lambda x: x+'\n', my_list)
+# f=open("my_file.txt", 'a',encoding='utf-8')
+# f.writelines(my_list)
 
 # Bài 03: Viết chương trình trộn 2 file thành file mới
 
