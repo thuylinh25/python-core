@@ -1,3 +1,6 @@
+hello
+this is my file
+
 summer
 autumn
 winter
