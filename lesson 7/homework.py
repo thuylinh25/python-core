@@ -121,13 +121,34 @@
 
 # Bài 10: Viết hàm đệ quy đếm và trả về số lượng chữ số lẻ của số nguyên dương n cho trước.
 #         Ví dụ: Hàm trả về 4 nếu n là 19922610 (do n có 4 số lẻ là 1, 9, 9, 1)
-def odd_count(n):
-   count=0
-   so_du = n % 10
-   while n>0:
-       if so_du <0:
-           return 1
-       elif so_du%2 !=0:
-           count+=1
-   return count
-print(odd_count())
+# def odd_count(n):
+#    last_digit = n % 10
+#    first_digit= n // 10
+#    if n<10 and last_digit % 2 == 0:
+#        return 0
+#    if last_digit % 2 != 0:
+#        return 1 + odd_count(first_digit)
+#    else:
+#        return 0 + odd_count(first_digit)
+#
+# print(odd_count(19922610))
+
+# Bài 11: Cho dãy số Tribonacci với công thức truy hồi sau:
+#             F(n) = F(n-1) + F(n-2) + F(n-3),    F(1) = 1, F(2) = 1, F(3) = 2
+#     Xây dựng 2 hàm để tìm ra số thứ n trong dãy số theo:
+#         + Hàm Đệ quy
+#         + Hàm Không đệ quy
+# def recursive_tribo(n):
+#     if n == 1 or n==2:
+#         return 1
+#     elif n==3:
+#         return 2
+#     else:
+#         return recursive_tribo(n-1)+recursive_tribo(n-2)+recursive_tribo(n-3)
+#
+# print(recursive_tribo(6))
+
+def tribo(n):
+    for i in 
+
+

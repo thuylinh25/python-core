@@ -53,8 +53,8 @@
 # import glob
 # def extract_characters(*file):
 #     character_list=[]
-#     files=glob.glob('*.txt')
-#     for file_elements in files:
+#     file=glob.glob('*.txt')
+#     for file_elements in file:
 #         with open(file_elements,'r',encoding='utf-8') as f:
 #             character_list.append(f.read())
 #     print(character_list)
