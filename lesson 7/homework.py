@@ -146,9 +146,29 @@
 #     else:
 #         return recursive_tribo(n-1)+recursive_tribo(n-2)+recursive_tribo(n-3)
 #
-# print(recursive_tribo(6))
-
-def tribo(n):
-    for i in 
+# print(recursive_tribo(0))
 
 
+# def fibonacci(n):
+#     Fib_Array = [1,1,2]
+#     if n<0:
+#       print("Fibbonacci can't be computed")
+#     elif n<=3:
+#       return Fib_Array[n-1]
+#     else:
+#       return fibonacci(n-1)+fibonacci(n-2)+fibonacci(n-3)
+#
+#
+# print(fibonacci(0))
+
+
+def fibonacci(n):
+    r=[]
+    if n<3:
+        return 1
+    if n>=3 and n==1 or n==2:
+        r[n]=n
+        r[n]=r[n-1]+r[n-2]+r[n-3]
+    return r[n]
+
+fibonacci(3)
