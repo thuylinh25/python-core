@@ -1,11 +1,11 @@
 #Bài 00: Viết chương trình sinh một tuple chứa các phần tử có các kiểu dữ liệu khác nhau.
     #Sau đó, unpack các phần tử trong một tuple.
-# tuple = (12, 'abc', 2.3, 1+3j)
-# a,b,c,d = tuple
-# print(a)
-# print(b)
-# print(c)
-# print(d)
+tuple = (12, 'abc', 2.3, 1+3j)
+a,b,c,d = tuple
+print(a)
+print(b)
+print(c)
+print(d)
 
 # Bài 01: Viết chương trình chuyển một tuple sang thành list và ngược lại từ list sang tuple
 # tuple = (12, 'abc', 2.3, 1+3j)
