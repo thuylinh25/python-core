@@ -1,22 +1,38 @@
-import bs4
+# -- coding: utf8 --
+# Đề tài 2. Là một người dùng có nhu cầu mua lò sưởi trong những ngày Đông tới.
+# Nhưng có quá nhiều trang thương mại điện tử mà mỗi đơn vị lại có một giá bán khác nhau.
+# Hãy xây dựng công cụ thể thực hiện trích xuất dữ liệu từ tối thiểu 2 trang thương mại điện tử lớn để so sánh giá của các sản phẩm lò sưởi
+# Chú ý:
+#     + Nên xây dựng để mở rộng cho các sản phẩm khác nữa
+#     + Thiết kế Cơ sở dữ liệu để lưu lại các dữ liệu đã trích xuất được
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import *
 import pandas as pd
-import requests
-url = 'https://www.imdb.com/search/title/?count=100&groups=top_1000&sort=user_rating%27' # các bạn thay link của trang mình cần lấy dữ liệu tại đây
-def get_page_content(url):
-   page = requests.get(url,headers={"Accept-Language":"en-US"})
-   return bs4.BeautifulSoup(page.text,"html.parser")
-soup = get_page_content(url)
-movies = soup.findAll('h3', class_='lister-item-header')
-titles = [movie.find('a').text for movie in movies]
-release = [rs.find('span',class_="lister-item-year text-muted unbold").text for rs in movies]
-certificate = [ce.text for ce in soup.findAll('span',class_='certificate')]
-runtime = [rt.text for rt in soup.findAll('span',class_='runtime')]
-genre = [gr.text for gr in soup.findAll('span',class_="genre")]
-rates = [rate['data-value'] for rate in soup.findAll('div',class_='inline-block ratings-imdb-rating')]
-df=pd.DataFrame({'titles':titles,
-                  'release':release,
-                  'certificate':certificate,
-                  'runtime':runtime,
-                  'rates': rates})
-print(df)
-df.to_csv("Phim.csv")
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+webdriver_path = 'C://Users//Linh Le//Downloads//chromedriver.exe'
+Lazadar_url = 'https://www.lazada.vn'
+search_item = 'lò sưởi'
+
+browser = webdriver.Chrome(webdriver_path)
+browser.get(Lazadar_url)
+
+search_bar = browser.find_element_by_id('q')
+search_bar.send_keys(search_item)
+search_bar.send_keys(Keys.ENTER)
+
+item_titles = browser.find_elements_by_class_name('c16H9d')
+item_prices = browser.find_elements_by_class_name('c13VH6')
+
+titles_list = []
+prices_list = []
+for title in item_titles:
+    titles_list.append(title.text)
+for price in item_prices:
+    prices_list.append(price.text)
+
+df = pd.DataFrame(zip(titles_list, prices_list), columns=["Tên sản phẩm", "Giá"])
+print (df)
+df.to_csv("Giá lò sưởi _lazada .csv")
