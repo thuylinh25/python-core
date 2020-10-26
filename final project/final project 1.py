@@ -22,7 +22,7 @@ password = input("Type your pasword and press enter: ")
 context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", port, context = context) as server:
     server.login(sender_email, password)
-    server.sendmail(sender_email, receiver_email, message)
+    server.sendmail(sender_email, receiver_email, message.encode("utf-8"))
 
 # Gửi đa
 import csv, smtplib, ssl
@@ -40,4 +40,4 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context = context) as server:
         reader = csv.reader(file)
         next(reader)
         for name, email in reader:
-            server.sendmail(sender_email, email,message.format(name=name))
+            server.sendmail(sender_email, email,message.format(name=name).encode("utf-8"))

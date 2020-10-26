@@ -14,7 +14,7 @@ import seaborn as sns
 
 webdriver_path = 'C://Users//Linh Le//Downloads//chromedriver.exe'
 Lazadar_url = 'https://www.lazada.vn'
-search_item = 'lò sưởi'
+search_item = 'lò sưởi điện'
 
 browser = webdriver.Chrome(webdriver_path)
 browser.get(Lazadar_url)
@@ -35,4 +35,4 @@ for price in item_prices:
 
 df = pd.DataFrame(zip(titles_list, prices_list), columns=["Tên sản phẩm", "Giá"])
 print (df)
-df.to_csv("Giá lò sưởi _lazada .csv")
+df.to_csv("Giá lò sưởi điện _lazada .csv")
