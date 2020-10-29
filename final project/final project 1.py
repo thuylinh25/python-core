@@ -27,7 +27,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", port, context = context) as server:
 import openpyxl
 from pathlib import Path
 import pandas as pd
-import csv, smtplib, ssl
+import smtplib, ssl
 port = 465
 sender_email = "shauqia53@gmail.com"
 message ="""Subject: Greetings
@@ -39,8 +39,7 @@ context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", port, context = context) as server:
     server.login(sender_email, password)
 
-    file = "contact_list.xlsx"
-    data = pd.ExcelFile(file)
+    data = pd.ExcelFile("contact_list.xlsx")
     df = data.parse("Sheet1")
     ps = openpyxl.load_workbook('contact_list.xlsx')
     sheet = ps['Sheet1']
