@@ -39,10 +39,10 @@ context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", port, context = context) as server:
     server.login(sender_email, password)
 
-    file = "excel.xlsx"
+    file = "contact_list.xlsx"
     data = pd.ExcelFile(file)
     df = data.parse("Sheet1")
-    ps = openpyxl.load_workbook('excel.xlsx')
+    ps = openpyxl.load_workbook('contact_list.xlsx')
     sheet = ps['Sheet1']
 
     for row in range(2, sheet.max_row + 1):
